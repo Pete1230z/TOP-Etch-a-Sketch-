@@ -1,4 +1,7 @@
 
+* {
+	border: black 1px solid;
+}
 
 body {
 	background-color: red;
@@ -20,6 +23,16 @@ h1 {
 	width: 50%;
 	height: 80%;
 	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.grid {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 100px;;
+	gap: 10px;
+	flex-basis: 25%;
 }
 
 .header {

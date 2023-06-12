@@ -5,12 +5,15 @@ form.addEventListener("submit", function(e) {
 
 var input = form.querySelector("input");
 var boxInput = input.value;
+gridContainer = document.getElementById("gridContainer");
 console.log(boxInput);
+
+gridContainer.innerHTML = "";
 
 for (var i = 0; i < boxInput; i++) {
 	var div = document.createElement("div");
 	console.log(div);
 	div.className = "grid";
-	document.getElementById("gridContainer").appendChild(div);
+	gridContainer.appendChild(div);
 }
 });
