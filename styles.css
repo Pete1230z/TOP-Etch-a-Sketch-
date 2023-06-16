@@ -1,7 +1,7 @@
 
 * {
 	border: black 1px solid;
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -25,10 +25,6 @@ h1 {
 	height: 80%;
 	background-color: white;
 	display: grid;
-}
-
-.grid {
-	
 }
 
 .header {

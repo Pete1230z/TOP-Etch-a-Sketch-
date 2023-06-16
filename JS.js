@@ -8,7 +8,7 @@ var boxInput = input.value
 gridContainer = document.getElementById("gridContainer");
 console.log(boxInput);
 
-for (var i = 0; i < boxInput * boxInput; i++) {
+for (var i = 0; i <= boxInput * boxInput - 1; i++) {
 	gridContainer.style.gridTemplateColumns =  `repeat(${boxInput}, 1fr)`;
 	gridContainer.style.gridTemplateRows =  `repeat(${boxInput}, 1fr)`;
 	var div = document.createElement("div");
