@@ -24,13 +24,13 @@ h1 {
 	height: 80%;
 	background-color: white;
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .grid {
 	flex-grow: 1;
 	flex-shrink: 1;
-	flex-basis: auto;
+    flex-basis: auto;
 }
 
 .header {
