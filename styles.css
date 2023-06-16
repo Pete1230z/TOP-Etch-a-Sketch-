@@ -1,6 +1,7 @@
 
 * {
 	border: black 1px solid;
+	box-sizing: border-box;
 }
 
 body {
@@ -23,14 +24,11 @@ h1 {
 	width: 50%;
 	height: 80%;
 	background-color: white;
-	display: flex;
-	flex-direction: column;
+	display: grid;
 }
 
 .grid {
-	flex-grow: 1;
-	flex-shrink: 1;
-    flex-basis: auto;
+	
 }
 
 .header {
