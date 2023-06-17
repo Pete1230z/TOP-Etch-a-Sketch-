@@ -30,6 +30,14 @@ for (var i = 0; i <= boxInput * boxInput - 1; i++) {
 }
 });
 
+//Makes it blue if you mouseover 
+
+gridContainer.addEventListener('mouseover', function(element) {
+	if (element.target.classList.contains('grid')) {
+		element.target.style.backgroundColor = 'blue';
+	}
+});
+
 clearButton.addEventListener("click", function() {
    input.disabled = false;
    input.value = 0;
@@ -38,3 +46,6 @@ clearButton.addEventListener("click", function() {
 	gridContainer.removeChild(divs[0]);
    }
 });
+
+
+
