@@ -32,4 +32,9 @@ for (var i = 0; i <= boxInput * boxInput - 1; i++) {
 
 clearButton.addEventListener("click", function() {
    input.disabled = false;
+   input.value = 0;
+   var divs = gridContainer.getElementsByClassName('grid');
+   while (divs.length > 0) {
+	gridContainer.removeChild(divs[0]);
+   }
 });
