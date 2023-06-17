@@ -48,7 +48,7 @@ input::-webkit-outer-spin-button,
         margin: 0;
       }
 
-.clear, .number {
+#clear, .number {
 	width: 300px;
 	padding: 5px;
 	font-size: 30px;

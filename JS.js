@@ -1,6 +1,8 @@
 //Grabs the form where are of this is housed
 
 var form = document.getElementById("inputForm");
+var clearButton = document.getElementById("clear");
+var input = form.querySelector("input");
 
 //Starts function that does everything
 
@@ -10,10 +12,9 @@ form.addEventListener("submit", function(e) {
 
 	e.preventDefault();
 
-var input = form.querySelector("input");
 input.disabled = true;
-var boxInput = input.value 
-gridContainer = document.getElementById("gridContainer");
+var boxInput = input.value;
+var gridContainer = document.getElementById("gridContainer");
 console.log(boxInput);
 
 for (var i = 0; i <= boxInput * boxInput - 1; i++) {
@@ -27,4 +28,8 @@ for (var i = 0; i <= boxInput * boxInput - 1; i++) {
 	div.className = "grid";
 	gridContainer.appendChild(div);
 }
+});
+
+clearButton.addEventListener("click", function() {
+   input.disabled = false;
 });
