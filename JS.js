@@ -2,7 +2,7 @@
 
 var form = document.getElementById("inputForm");
 var clearButton = document.getElementById("clear");
-var input = form.querySelector("input");
+var input = document.getElementById("number");
 
 //Starts function that does everything
 
@@ -30,17 +30,40 @@ for (var i = 0; i <= boxInput * boxInput - 1; i++) {
 }
 });
 
-//Makes it blue if you mouseover 
+
+//If you click on random grid it will create a grid between 1-64
+
+var randomGrid = document.getElementById('generator')
+randomGrid.addEventListener('click', function(){
+var randomNumber = Math.floor(Math.random() * (65 - 1) + 1); 
+console.log(randomNumber);
+
+for (var i = 0; i <= randomNumber * randomNumber - 1; i++) {
+
+	gridContainer.style.gridTemplateColumns =  `repeat(${randomNumber}, 1fr)`;
+	gridContainer.style.gridTemplateRows =  `repeat(${randomNumber}, 1fr)`;
+	var div = document.createElement("div");
+	console.log(div);
+	div.className = "grid";
+	gridContainer.appendChild(div);
+	input.disabled = true;
+}
+});
+
+//Makes it black if you mouseover 
 
 gridContainer.addEventListener('mouseover', function(element) {
 	if (element.target.classList.contains('grid')) {
-		element.target.style.backgroundColor = 'blue';
+		element.target.style.backgroundColor = 'black';
 	}
 });
 
-clearButton.addEventListener("click", function() {
+//Clears grid when clicked on
+
+clearButton.addEventListener("click", function(e) {
+   e.preventDefault();
    input.disabled = false;
-   input.value = 0;
+   input.value = '';
    var divs = gridContainer.getElementsByClassName('grid');
    while (divs.length > 0) {
 	gridContainer.removeChild(divs[0]);
