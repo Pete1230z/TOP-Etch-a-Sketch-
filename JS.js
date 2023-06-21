@@ -26,6 +26,7 @@ for (var i = 0; i <= boxInput * boxInput - 1; i++) {
 	var div = document.createElement("div");
 	console.log(div);
 	div.className = "grid";
+	div.style.border = "1px solid black";
 	gridContainer.appendChild(div);
 }
 });
@@ -45,6 +46,7 @@ for (var i = 0; i <= randomNumber * randomNumber - 1; i++) {
 	var div = document.createElement("div");
 	console.log(div);
 	div.className = "grid";
+	div.style.border = "1px solid black";
 	gridContainer.appendChild(div);
 	input.disabled = true;
 }
